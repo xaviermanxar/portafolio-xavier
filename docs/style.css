@@ -1,34 +1,57 @@
-:root {
-  --navy: #2c3e50;
-  --teal: #1abc9c;
-  --light: #f4f6f8;
-  --ink: #243447;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
 }
 
-* { box-sizing: border-box; }
-body { color: var(--ink); font-family: Arial, sans-serif; margin: 0; background: var(--light); }
-.navbar { background: var(--navy); overflow: hidden; padding: 0 5%; text-align: right; }
-.navbar a { color: #ecf0f1; display: inline-block; padding: 14px 20px; text-decoration: none; }
-.navbar a:hover, .navbar a[aria-current="page"] { background: var(--teal); }
-.banner { background: linear-gradient(rgb(44 62 80 / 78%), rgb(26 188 156 / 72%)), url("img/bogota-banner.jpg") center / cover no-repeat; color: white; padding: 88px 20px; text-align: center; }
-.banner h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 12px; }
-.banner p { font-size: 1.15rem; margin: 0; }
-.contenido { display: flex; gap: 30px; justify-content: space-around; margin: 0 auto; max-width: 1100px; padding: 40px 20px; }
-.sobre-mi, .proyectos, .pagina { background: white; border-radius: 8px; box-shadow: 0 8px 22px rgb(44 62 80 / 10%); padding: 28px; }
-.sobre-mi, .proyectos { flex: 1; }
-.sobre-mi img { display: block; height: auto; margin-bottom: 20px; max-width: 100%; }
-.boton { background: var(--teal); border-radius: 5px; color: white; display: inline-block; padding: 10px 15px; text-decoration: none; }
-.boton:hover { background: #159a80; }
-.pagina { margin: 40px auto; max-width: 960px; }
-.pagina h1, .pagina h2 { color: var(--navy); }
-li { margin-bottom: 10px; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid #dfe5e8; padding: 12px; text-align: left; }
-th { background: #eaf7f4; }
-footer { background: var(--navy); color: #ecf0f1; padding: 24px 20px; text-align: center; }
-footer a { color: #8debd8; }
-@media (max-width: 720px) {
-  .navbar { text-align: center; }
-  .navbar a { padding: 12px 10px; }
-  .contenido { flex-direction: column; }
+.navbar {
+  background-color: #2c3e50;
+  text-align: right;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: #ecf0f1;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #1abc9c;
+}
+
+.banner {
+  background: url('img/bogota-banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.sobre-mi, .proyectos {
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
 }
