@@ -1,0 +1,8 @@
+title: Xavier Manxar
+email: xavier@example.com
+description: >-
+  Portafolio profesional de estrategia digital, gestión social y comunicación visual.
+baseurl: "/portafolio-xavier"
+url: "https://xaviermanxar.github.io"
+theme: minima
+markdown: kramdown
