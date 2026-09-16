@@ -7,20 +7,30 @@
 </head>
 <body>
   <header class="navbar">
-    <a href="index.html">Inicio</a>
-    <a href="perfil.html">Perfil</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="contacto.html">Contacto</a>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Xavier Manxar</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
   </header>
   <section class="banner">
+  </section>
+  <header class="intro">
     <h1>¡Bienvenido a mi Portafolio!</h1>
     <p>Xavier Manxar | Estrategia Digital &amp; Proyectos Sociales</p>
-  </section>
+  </header>
   <main class="contenido">
     <div class="sobre-mi">
       <img src="img/perfil.jpg" alt="Foto de Xavier">
       <h2>Sobre mí</h2>
-      <p>Consultor en estrategia digital y voluntariado. Experiencia en justicia y publicación de eBooks.</p>
+      <div>
+        <p>Consultor en estrategia digital y<br>voluntariado.</p>
+        <p>Experiencia en justicia y publicación<br>de EBooks.</p>
+      </div>
       <a href="perfil.html" class="boton">Ver mi perfil</a>
     </div>
     <div class="proyectos">
@@ -33,9 +43,13 @@
       <a href="proyectos.html" class="boton">Ver proyectos</a>
     </div>
   </main>
-  <footer>
-    <p>Contáctame:</p>
-    <p><a href="https://linkedin.com/in/xavier-manxar">LinkedIn</a> | <a href="mailto:xavier@example.com">Email</a></p>
+
+  <footer class="contacto">
+    <h2>Contáctame</h2>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/xavier-manxar"><strong>in</strong> LinkedIn <span>/xavier-manxar</span></a>
+      <a href="mailto:xavier@example.com"><strong>✉</strong> Email <span>xavier@example.com</span></a>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,57 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background: #fff;
+  color: #101827;
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f4f6f8;
 }
 
 .navbar {
-  background-color: #2c3e50;
-  text-align: right;
-  padding: 10px 0;
+  background: #173667;
+  height: 66px;
+}
+
+.nav-inner {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 28px;
 }
 
 .navbar a {
-  color: #ecf0f1;
-  padding: 14px 20px;
+  color: #fff;
   text-decoration: none;
 }
 
-.navbar a:hover {
-  background-color: #1abc9c;
+.brand {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.nav-links {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+  height: 100%;
+}
+
+.nav-links a {
+  align-items: center;
+  display: flex;
+  font-size: 17px;
+  padding: 0 18px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  border-bottom: 3px solid #27a9e1;
 }
 
 .banner {
-  background: url('img/bogota-banner.jpg') center/cover no-repeat;
-  color: white;
+  background:
+    linear-gradient(rgb(14 43 78 / 10%), rgb(14 43 78 / 10%)),
+    url("img/bogota-banner.jpg") center / cover no-repeat;
+  height: 202px;
+}
+
+.intro {
+  padding: 22px 20px 18px;
   text-align: center;
-  padding: 80px 20px;
+}
+
+.intro h1 {
+  color: #173667;
+  font-size: 34px;
+  margin: 0 0 14px;
+}
+
+.intro p {
+  font-size: 22px;
+  margin: 0;
 }
 
 .contenido {
   display: flex;
-  justify-content: space-around;
-  padding: 40px;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 20px 25px;
 }
 
-.sobre-mi, .proyectos {
-  width: 40%;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+.sobre-mi,
+.proyectos {
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 5px rgb(23 54 103 / 8%);
+  min-height: 282px;
+  padding: 22px 32px;
+  width: 50%;
+}
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 24px;
+}
+
+.sobre-mi img {
+  border-radius: 50%;
+  grid-row: 2 / 4;
+  height: 145px;
+  object-fit: cover;
+  width: 145px;
+}
+
+.sobre-mi h2,
+.proyectos h2 {
+  border-bottom: 1px solid #d5dde7;
+  color: #173667;
+  font-size: 25px;
+  margin: 0 0 15px;
+  padding-bottom: 8px;
+}
+
+.sobre-mi h2 {
+  grid-column: 1 / -1;
+}
+
+.sobre-mi p {
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+.proyectos {
+  padding-left: 44px;
+}
+
+.proyectos ul {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 17px 0 20px;
+  padding-left: 20px;
 }
 
 .boton {
+  align-self: end;
+  background: #1769c2;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  color: #fff;
   display: inline-block;
-  background-color: #1abc9c;
-  color: white;
-  padding: 10px 15px;
+  font-size: 17px;
+  font-weight: 700;
+  justify-self: start;
+  padding: 11px 20px;
   text-decoration: none;
-  border-radius: 5px;
 }
 
-footer {
-  background-color: #2c3e50;
-  color: #ecf0f1;
+.boton:hover {
+  background: #0f4f99;
+}
+
+.contacto {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 20px 18px;
   text-align: center;
-  padding: 20px;
+}
+
+.contacto h2 {
+  align-items: center;
+  color: #173667;
+  display: flex;
+  font-size: 27px;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 0 14px;
+}
+
+.contacto h2::before,
+.contacto h2::after {
+  background: #cbd5e1;
+  content: "";
+  height: 1px;
+  max-width: 390px;
+  width: 35%;
+}
+
+.contact-links {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.contact-links a {
+  color: #173667;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.contact-links strong {
+  background: #148ccc;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 7px;
+  min-width: 28px;
+  padding: 2px 4px;
+}
+
+.contact-links span {
+  color: #075caa;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    height: auto;
+  }
+
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px 0;
+  }
+
+  .nav-links {
+    height: 48px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    flex: 1;
+    font-size: 14px;
+    justify-content: center;
+    padding: 0 5px;
+  }
+
+  .banner {
+    height: 160px;
+  }
+
+  .intro h1 {
+    font-size: 27px;
+  }
+
+  .intro p {
+    font-size: 17px;
+  }
+
+  .contenido {
+    flex-direction: column;
+  }
+
+  .sobre-mi,
+  .proyectos {
+    width: 100%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 14px;
+  }
 }
